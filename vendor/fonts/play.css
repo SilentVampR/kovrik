@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Play';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./play/Play-Regular.woff") format("woff"),
+       url("./play/Play-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: 'Play';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./play/Play-Bold.woff") format("woff"),
+       url("./play/Play-Bold.ttf") format("ttf");
+}

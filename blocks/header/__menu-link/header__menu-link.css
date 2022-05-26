@@ -1,0 +1,14 @@
+.header__menu-link {
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #003a6e;
+}
+
+.header__menu-link:hover {
+  background-color: #ffe3d8;
+}
