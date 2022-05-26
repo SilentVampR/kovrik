@@ -2,3 +2,7 @@
   background-color: #f60;
   color: #fff;
 }
+
+.header__menu-link_active:hover {
+  color: #003a6e;
+}

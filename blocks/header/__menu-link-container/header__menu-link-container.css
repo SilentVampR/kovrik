@@ -1,3 +1,7 @@
-.header__menu-link-container {
+.header__menu-link-container:first-of-type {
+  width: 100%;
+}
+
+.header__menu-link-container:last-of-type {
   width: 100%;
 }

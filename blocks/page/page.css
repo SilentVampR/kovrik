@@ -1,11 +1,12 @@
 * {
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .page {
   background-image: url(../../images/bg.jpg);
   background-color: transparent;
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
   position: relative;
   height: 100%;
   font-family: Play, Arial, Helvetica, sans-serif;

@@ -1,0 +1,16 @@
+.contact__phone_type_wa {
+  position: relative;
+}
+
+.contact__phone_type_wa::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -3px;
+  background-image: url(../../../../images/whatsapp_icon.png);
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
