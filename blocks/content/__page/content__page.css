@@ -1,0 +1,8 @@
+.content__page {
+  position: relative;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.4s, opacity 0.4s linear;
+  z-index: 5;
+}
