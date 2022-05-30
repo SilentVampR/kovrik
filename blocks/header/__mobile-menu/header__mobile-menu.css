@@ -1,6 +1,6 @@
 .header__mobile-menu {
   position: fixed;
-  z-index: 998;
+  z-index: 1000;
   background-color: white;
   top: 0;
   right: 0;

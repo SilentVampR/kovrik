@@ -1,7 +1,15 @@
 .contacts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   padding: 0 30px 30px;
   box-sizing: border-box;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

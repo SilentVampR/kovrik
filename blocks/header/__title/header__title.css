@@ -2,10 +2,15 @@
   color: #003a6e;
   font-weight: 400;
   text-align: center;
-  width: 100%;
   max-width: 600px;
   margin: 0;
-  font-size: 30px;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
