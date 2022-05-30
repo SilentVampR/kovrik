@@ -1,4 +1,4 @@
-.header__menu-link {
+.footer__menu-link {
   height: 100%;
   padding: 0 10px;
   display: flex;
@@ -7,16 +7,17 @@
   text-decoration: none;
   box-sizing: border-box;
   color: #003a6e;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.footer__menu-link:hover {
+  color: #004f94;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1280px) {
-  .header__menu-link {
+  .footer__menu-link {
     padding: 0 20px;
-    font-size: 20px;
+    font-size: 18px;
   }
-}
-
-.header__menu-link:hover {
-  background-color: #ffe3d8;
 }

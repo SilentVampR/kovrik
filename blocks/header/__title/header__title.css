@@ -3,5 +3,13 @@
   font-weight: 400;
   text-align: center;
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
+  margin: 0;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__title {
+    font-size: 34px;
+  }
 }

@@ -1,0 +1,23 @@
+.section-slider__link-container {
+  display: block;
+}
+
+.section-slider__link-container:first-of-type {
+  display: none;
+}
+
+.section-slider__link-container:last-of-type {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .section-slider__link-container:last-of-type {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section-slider__link-container:first-of-type {
+    display: block;
+  }
+}

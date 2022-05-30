@@ -1,0 +1,12 @@
+.header__mobile-menu-link {
+  background-image: url(../../../images/burger-menu.svg);
+  background-color: transparent;
+  border: none;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px 30px;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.footer__menu-link-container {
+  min-height: 35px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .footer__menu-link-container {
+    min-height: 55px;
+  }
+}
+/*.footer__menu-link-container:first-of-type {
+  width: 100%;
+}
+
+.footer__menu-link-container:last-of-type {
+  width: 100%;
+}
+*/

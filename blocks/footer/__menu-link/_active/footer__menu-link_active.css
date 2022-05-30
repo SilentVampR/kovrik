@@ -1,0 +1,8 @@
+.footer__menu-link_active {
+  color: #f40;
+  text-decoration: underline;
+}
+
+.footer__menu-link_active:hover {
+  text-decoration: none;
+}

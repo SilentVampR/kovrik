@@ -1,4 +1,4 @@
-.header__menu-links {
+.footer__menu-links {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .header__menu-links {
+  .footer__menu-links {
     flex-wrap: nowrap;
   }
 }

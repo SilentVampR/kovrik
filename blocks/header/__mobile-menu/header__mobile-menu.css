@@ -1,0 +1,16 @@
+.header__mobile-menu {
+  position: fixed;
+  z-index: 998;
+  background-color: white;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .header__mobile-menu {
+    display: none;
+  }
+}

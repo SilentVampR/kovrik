@@ -1,7 +1,15 @@
-.header__menu-link-container:first-of-type {
-  width: 100%;
+.header__menu-link-container {
+  min-height: 35px;
 }
 
-.header__menu-link-container:last-of-type {
-  width: 100%;
+@media screen and (min-width: 1024px) {
+  .header__menu-link-container:first-of-type {
+    width: 100%;
+  }
+  .header__menu-link-container:last-of-type {
+    width: 100%;
+  }
+  .header__menu-link-container {
+    min-height: 55px;
+  }
 }

@@ -1,0 +1,9 @@
+.footer__contact {
+  width: 50%;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.footer__contact:first-of-type {
+  width: 100%;
+}

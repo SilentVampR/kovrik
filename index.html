@@ -13,13 +13,16 @@
 <body class="page">
   <div class="page__wrapper">
     <header class="header">
+      <nav class="header__mobile-menu">
+        <button class="header__mobile-menu-link" type="button"></button>
+      </nav>
       <nav class="header__menu">
         <ul class="header__menu-links">
           <li class="header__menu-link-container">
-            <a class="header__menu-link header__menu-link_active" data-link="mainpage">Коврик&#8209;Ру</a>
+            <a class="header__menu-link header__menu-link_active" href="">Коврик&#8209;Ру</a>
           </li>
           <li class="header__menu-link-container">
-            <a class="header__menu-link" data-link="stirka">Стирка&nbsp;ковров</a>
+            <a class="header__menu-link">Стирка&nbsp;ковров</a>
           </li>
           <li class="header__menu-link-container">
             <a class="header__menu-link">Мойка&nbsp;окон</a>
@@ -46,7 +49,6 @@
         <section class="contacts">
           <div class="contact">
             <h2 class="contact__city">г&nbsp;Белогорск</h2>
-            <p class="contact__address"></p>
             <a href="tel:+79622848117"
               class="contact__phone contact__phone_type_wa">+7&nbsp;962&nbsp;284&#8209;81&#8209;17</a>
           </div>
@@ -57,7 +59,6 @@
           </div>
           <div class="contact">
             <h2 class="contact__city">г&nbsp;Свободный</h2>
-            <p class="contact__address"></p>
             <a href="tel:+79622848117"
               class="contact__phone contact__phone_type_wa">+7&nbsp;962&nbsp;284&#8209;81&#8209;17</a>
           </div>
@@ -66,7 +67,7 @@
           <h2 class="section-title">Профессиональные услуги от компании Коврик-РУ</h2>
           <p class="section-paragraph">За счет огромного опыта нашей команды и наличия современного стационарного
             оборудования, больших цехов для&nbsp;стирки, обработки, сушки изделий мы обеспечиваем высокое качество работ
-            в короткие сроки.</p>
+            в&nbsp;короткие сроки.</p>
           <p class="section-paragraph">Мы развиваемся, всегда находимся в поиске лучшего, чтобы предложить своим
             клиентам сервис достойного уровня.</p>
           <p class="section-paragraph">Работаем круглый год.</p>
@@ -74,41 +75,19 @@
         <section class="info-block">
           <h2 class="section-title">Профессиональная стирка ковров</h2>
           <ul class="section-slider">
-            <li>
+            <li class="section-slider__link-container">
               <a class="section-slider__link">
                 <img src="./images/carpet-1.jpg" class="section-slider__img" data-link="stirka">
               </a>
             </li>
-            <li>
+            <li class="section-slider__link-container">
               <a class="section-slider__link">
                 <img src="./images/carpet-2.jpg" class="section-slider__img" data-link="stirka">
               </a>
             </li>
-            <li>
+            <li class="section-slider__link-container">
               <a class="section-slider__link">
                 <img src="./images/carpet-3.jpg" class="section-slider__img" data-link="stirka">
-              </a>
-            </li>
-          </ul>
-        </section>
-        </div>
-        <div class="content__page content__page_type_stirka content__page_hidden content__page_no-display" data-name="stirka">
-        <section class="info-block">
-          <h2 class="section-title">Профессиональная стирка ковров</h2>
-          <ul class="section-slider">
-            <li>
-              <a class="section-slider__link">
-                <img src="./images/carpet-1.jpg" class="section-slider__img">
-              </a>
-            </li>
-            <li>
-              <a class="section-slider__link">
-                <img src="./images/carpet-2.jpg" class="section-slider__img">
-              </a>
-            </li>
-            <li>
-              <a class="section-slider__link">
-                <img src="./images/carpet-3.jpg" class="section-slider__img">
               </a>
             </li>
           </ul>
@@ -116,34 +95,56 @@
       </div>
     </main>
     <footer class="footer">
-      section.footer__address
-      Адрес: г. Благовещенск, ул. Островского, 94
-      Тел.: 54-33-58, +7-962–284–33–58
-      Консультация и стол заказов: Ежедневно 08:00 - 21:00
-      Пункт приема: Ежедневно 09:00 - 19:00
+      <section class="footer__contacts">
+        <div class="contact footer__contact">
+          <h2 class="contact__city">г. Благовещенск, ул. Островского, 94</h2>
+          <p class="contact__phone">Тел.: 54-33-58, +7-962–284–33–58</p>
+          <p class="contact__info">Консультация и стол заказов: Ежедневно 08:00 - 21:00</p>
+          <p class="contact__info">Пункт приема: Ежедневно 09:00 - 19:00</p>
+        </div>
+        <div class="contact footer__contact">
+          <h2 class="contact__city">г. Свободный</h2>
+          <p class="contact__phone">Тел. +7 962 284-81-17</p>
+          <p class="contact__info">Консультация и стол заказов</p>
+          <p class="contact__info">Ежедневно 08:00 - 21:00</p>
+        </div>
+        <div class="contact footer__contact">
+          <h2 class="contact__city">г. Белогорск</h2>
+          <p class="contact__phone">Тел. +7 962 284-81-17</p>
+          <p class="contact__info">Консультация и стол заказов</p>
+          <p class="contact__info">Ежедневно 08:00 - 21:00</p>
+        </div>
+      </section>
 
-​Адрес: г. Свободный
-Тел. +7 962 284-81-17
-Консультация и стол заказов:
-Ежедневно 08:00 - 21:00
+      <nav class="footer__menu">
+        <ul class="footer__menu-links">
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link footer__menu-link_active" href="">Коврик&#8209;Ру</a>
+          </li>
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link">Стирка&nbsp;ковров</a>
+          </li>
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link">Мойка&nbsp;окон</a>
+          </li>
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link">Химчистка&nbsp;на&nbsp;дому</a>
+          </li>
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link">Уборка&nbsp;помещений</a>
+          </li>
+          <li class="footer__menu-link-container">
+            <a class="footer__menu-link">Услуги&nbsp;прачечной&nbsp;и&nbsp;химчистки</a>
+          </li>
+        </ul>
+      </nav>
 
-​Адрес: г. Белогорск
-Тел. +7 962 284-81-17
-Консультация и стол заказов:
-Ежедневно 08:00 - 21:00
+      <p class="copyright">&copy;</p>
 
-Коврик-РУ
-Стирка ковров
-Мойка окон
-Химчистка на дому
-Уборка помещений
-Услуги прачечной и химчистки
-Наши реквизиты
-
-© 2017-2022 «Коврик-РУ»
-
-Данный сайт предоставляет исключительно информационные услуги и не является договором публичной аферты
+      <p class="information">Данный сайт предоставляет исключительно информационные услуги и не является договором
+        публичной аферты</p>
     </footer>
+    <a href="https://taplink.cc/kovrik.ru" target="_blank" class="call-button" rel="nofollow">Позвонить</a>
   </div>
   <script src="./scripts/script.js"></script>
 </body>
