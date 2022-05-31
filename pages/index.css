@@ -1,5 +1,6 @@
 /* @import url(../blocks);*/
-@import url(../vendor/normalize.css);
+@import url(../vendor/styles/normalize.css);
+@import url(../vendor/styles/swiper-min.css);
 
 @import url(../vendor/fonts/play.css);
 

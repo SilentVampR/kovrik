@@ -74,23 +74,25 @@
         </section>
         <section class="info-block">
           <h2 class="section-title">Профессиональная стирка ковров</h2>
-          <ul class="section-slider">
-            <li class="section-slider__link-container">
-              <a class="section-slider__link">
-                <img src="./images/carpet-1.jpg" class="section-slider__img" data-link="stirka">
-              </a>
-            </li>
-            <li class="section-slider__link-container">
-              <a class="section-slider__link">
-                <img src="./images/carpet-2.jpg" class="section-slider__img" data-link="stirka">
-              </a>
-            </li>
-            <li class="section-slider__link-container">
-              <a class="section-slider__link">
-                <img src="./images/carpet-3.jpg" class="section-slider__img" data-link="stirka">
-              </a>
-            </li>
-          </ul>
+          <div class="swiper">
+            <ul class="section-slider swiper-wrapper">
+              <li class="section-slider__link-container swiper-slide">
+                <a class="section-slider__link">
+                  <img src="./images/carpet-1.jpg" class="section-slider__img">
+                </a>
+              </li>
+              <li class="section-slider__link-container swiper-slide">
+                <a class="section-slider__link">
+                  <img src="./images/carpet-2.jpg" class="section-slider__img">
+                </a>
+              </li>
+              <li class="section-slider__link-container swiper-slide">
+                <a class="section-slider__link">
+                  <img src="./images/carpet-3.jpg" class="section-slider__img">
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </main>
@@ -147,6 +149,31 @@
     <a href="https://taplink.cc/kovrik.ru" target="_blank" class="call-button" rel="nofollow">Позвонить</a>
   </div>
   <script src="./scripts/script.js"></script>
+  <script src="./vendor/scripts/swiper.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      breakpoints: {
+      320: {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        initialSlide: 1,
+      },
+      768: {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1024: {
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        initialSlide: 0,
+      }
+    },
+    });
+  </script>
 </body>
 
 </html>

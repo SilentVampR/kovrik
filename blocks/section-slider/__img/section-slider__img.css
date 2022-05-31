@@ -1,4 +1,4 @@
-.section-slider__img {
+/*.section-slider__img {
   width: 80vw;
   min-width: 250px;
 }
@@ -20,4 +20,8 @@
   .section-slider__img {
     max-width: 350px;
   }
+}
+*/
+.section-slider__img {
+  width: 100%;
 }

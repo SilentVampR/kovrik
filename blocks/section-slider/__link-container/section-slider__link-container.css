@@ -1,7 +1,7 @@
 .section-slider__link-container {
   display: block;
 }
-
+/*
 .section-slider__link-container:first-of-type {
   display: none;
 }
@@ -21,3 +21,4 @@
     display: block;
   }
 }
+*/
