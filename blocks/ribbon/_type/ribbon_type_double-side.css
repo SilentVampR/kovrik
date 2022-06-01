@@ -1,0 +1,40 @@
+.ribbon_type_double-side::before {
+  position: absolute;
+  z-index: 2;
+  content: ' ';
+  background-image: url(../../../images/ribbon_left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100%;
+  width: 90px;
+  left: calc(-90px + 25px);
+  top: 17px;
+}
+
+.ribbon_type_double-side::after {
+  position: absolute;
+  z-index: 2;
+  content: ' ';
+  background-image: url(../../../images/ribbon_right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100%;
+  width: 90px;
+  right: calc(-90px + 25px);
+  top: 17px;
+}
+
+@media screen and (min-width: 1024px) {
+  .ribbon_type_double-side::before {
+    top: 18px;
+    left: calc(-110px + 25px);
+    width: 110px;
+  }
+  .ribbon_type_double-side::after {
+    top: 18px;
+    right: calc(-110px + 25px);
+    width: 110px;
+  }
+}

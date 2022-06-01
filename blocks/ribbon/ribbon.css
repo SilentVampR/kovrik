@@ -1,0 +1,21 @@
+.ribbon {
+  background-color: #eb660d;
+  padding: 20px 60px;
+  position: absolute;
+  bottom: -50px;
+  z-index: 3;
+  min-height: 110px;
+  min-width: 60%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .ribbon {
+    padding: 20px 100px;
+    min-height: 120px;
+  }
+}

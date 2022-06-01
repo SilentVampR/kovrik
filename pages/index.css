@@ -48,6 +48,10 @@
 @import url(../blocks/section-slider/__link/section-slider__link.css);
 @import url(../blocks/section-slider/__img/section-slider__img.css);
 
+@import url(../blocks/our-team/our-team.css);
+@import url(../blocks/our-team/__title/our-team__title.css);
+@import url(../blocks/our-team/__subtitle/our-team__subtitle.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__menu/footer__menu.css);
 @import url(../blocks/footer/__menu-link-container/footer__menu-link-container.css);
@@ -61,3 +65,7 @@
 @import url(../blocks/information/information.css);
 
 @import url(../blocks/call-button/call-button.css);
+@import url(../blocks/ribbon/ribbon.css);
+@import url(../blocks/ribbon/_type/ribbon_type_double-side.css);
+@import url(../blocks/ribbon/_type/ribbon_type_left-side.css);
+@import url(../blocks/ribbon/_type/ribbon_type_right-side.css);

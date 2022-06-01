@@ -1,0 +1,13 @@
+.our-team__title {
+color: #fff;
+font-size: 24px;
+font-weight: 400;
+text-align: center;
+margin: 0 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .our-team__title {
+    font-size: 34px;
+  }
+}
