@@ -1,0 +1,9 @@
+.info-block_type_map {
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .info-block_type_map {
+    display: block;
+  }
+}
