@@ -1,0 +1,17 @@
+.info-block__main-img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 350px;
+  width: 100%;
+  border: 8px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .info-block__main-img {
+    margin: 0 0 15px 15px;
+    float: right;
+    width: 320px;
+  }
+}

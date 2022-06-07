@@ -28,3 +28,22 @@ const hideSideMenu = () => {
 }
 
 mobileMenuButton.addEventListener('click', showSideMenu);
+
+const popupCall = document.querySelector('.popup_type_call');
+const callButton = document.querySelector('.call-button');
+
+const openPopup = (popup) => {
+  popup.classList.add('popup_opened');
+  const closeButton = popup.querySelector('.popup__close-button');
+  closeButton.addEventListener('click', popupClose);
+}
+
+const popupClose = (e) => {
+  const targetPopup = e.target.closest('.popup');
+  targetPopup.classList.remove('popup_opened');
+  e.target.removeEventListener('click', popupClose);
+}
+
+callButton.addEventListener('click', () => {
+  openPopup(popupCall);
+});

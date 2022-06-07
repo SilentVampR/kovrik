@@ -1,0 +1,7 @@
+.side-menu__link-container {
+  margin: 0 0 40px;
+}
+
+.side-menu__link-container:last-of-type {
+  margin: 0;
+}

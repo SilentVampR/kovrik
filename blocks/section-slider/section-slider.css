@@ -1,13 +1,26 @@
 .section-slider {
   list-style: none;
-  padding: 0 0 20px;
+  padding: 0 0 8.125vw;
   display: flex;
   /*justify-content: center;*/
   align-items: flex-start;
+  margin: 0;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .section-slider {
-    /*justify-content: space-between;*/
+    padding: 0 0 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-slider {
+    padding: 0 0 26px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-slider {
+    padding: 0 0 30px;
   }
 }

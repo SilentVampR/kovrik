@@ -1,20 +1,20 @@
 .call-button {
   text-decoration: none;
   min-height: 50px;
+  width: 100%;
   min-width: 250px;
   position: fixed;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   background-color: #f60;
   color: #fff;
   font-size: 24px;
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
+  border: none;
+  cursor: pointer;
 }
 
 .call-button:hover {
@@ -25,6 +25,7 @@
   .call-button {
     right: 50px;
     bottom: 50px;
+    width: unset;
     left: unset;
   }
 }
