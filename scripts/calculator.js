@@ -118,7 +118,79 @@
   $('#del2').on('click', del2);
   $('#del3').on('click', del3);
 });*/
+
+const calculator = document.querySelector('.calculator');
+
+const calculatorContainer = calculator.querySelector('.calculator__container');
+
+// const form = calculatorContainer.querySelector('.calculator__form');
+
+
+const calculate = (e) => {
+  const targetForm = e.target.closest('.calculator__carpet');
+  const height = targetForm.querySelector('.calculator__form-input_param_height').value;
+  const width = targetForm.querySelector('.calculator__form-input_param_width').value;
+  const price = targetForm.querySelector('.calculator__form-input_param_type').value;
+  let subTotalPrice = 0;
+  if(height > 0 && width > 0 && price > 0) {
+    subTotalPrice = width * height * price;
+    targetForm.querySelector('.calculator__text-sum').textContent = subTotalPrice;
+  }
+  totalSum();
+}
+
+const totalSum = () => {
+  const sums = calculator.querySelectorAll('.calculator__text-sum');
+  let total = 0;
+  if(sums) {
+    const sumsList = Array.from(sums);
+    sumsList.forEach(item => {
+      total += parseFloat(item.textContent);
+    })
+  }
+  //Берем все итого на странице и складываем в конце каждой калькуляции
+  console.log(total);
+}
+
+const addForm = () => {
+  const carpetTemplate = calculatorContainer.querySelector('#carpet').content.querySelector('.calculator__carpet').cloneNode(true);
+  let formsOnPage = 0;
+  const forms = calculatorContainer.querySelectorAll('.calculator__form');
+  if(forms) {
+    formsOnPage = Array.from(forms).length;
+  }
+  if (formsOnPage <= 3) {
+    const formId = formsOnPage + 1;
+    const form = carpetTemplate.querySelector('.calculator__form');
+    const inputs = form.querySelectorAll('.calculator__form-input');
+    const title = carpetTemplate.querySelector('.calculator__title');
+    const addButton = carpetTemplate.querySelector('.calculator__button');
+    if(formId !== 1) {
+      addButton.classList.remove('calculator__button_type_add');
+      addButton.classList.add('calculator__button_type_remove');
+      addButton.textContent = "Удалить ковёр";
+      addButton.addEventListener('click', removeForm);
+    } else {
+      addButton.addEventListener('click', addForm);
+    }
+
+    form.addEventListener('keyup', calculate);
+
+    title.textContent = `Ковёр №${formId}`;
+    console.log(carpetTemplate);
+    calculatorContainer.append(carpetTemplate);
+  }
+}
+
+const removeForm = (e) => {
+  // e.target.removeEventlistener('click', removeForm);
+  console.log(e.target);
+}
+
+
 function digit(input) {
   input.value = input.value.replace(/[^\.\,\d]+/ig, '').replace(/[\.\,]+/ig, '.');
   return false;
 };
+
+addForm();

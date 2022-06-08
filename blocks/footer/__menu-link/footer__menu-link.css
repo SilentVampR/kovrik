@@ -8,11 +8,14 @@
   box-sizing: border-box;
   color: #003a6e;
   font-size: 16px;
+  opacity: 1;
+  transition: opacity 0.4s linear;
 }
 
 .footer__menu-link:hover {
   color: #004f94;
   text-decoration: underline;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 1280px) {

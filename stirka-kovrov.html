@@ -145,33 +145,6 @@
 
 
           <style>
-            .total {
-              background-color: #F4752C;
-              color: #FFF;
-              margin: 20px -15px -20px -15px;
-              padding: 30px;
-              font-weight: bold;
-              text-align: right;
-              /*border-radius: 0 0 10px 10px;
-		-moz-border-radius: 0 0 10px 10px;
-		-webkit-border-radius: 0 0 10px 10px;*/
-            }
-
-            input,
-            select {
-              margin-bottom: 10px;
-              margin-top: 5px;
-              height: 25px;
-              font-size: 12pt;
-              max-width: 200px;
-              width: 100px;
-            }
-
-            select {
-              width: 150px;
-              height: 32px;
-            }
-
             #add_1,
             #add_2 {
               color: #F4752C;
@@ -201,173 +174,79 @@
             }
           </style>
           <div class="calculator">
-            <div class="calculator__carpet">
-              <h2 class="calculator__title">Ковёр №1</h2>
-              <form id="form1">
-                <label>Длина (м)</label><br>
-                <input type="text" id="height" onKeyUp="digit(this)" placeholder="1.1"><br>
-                <label>Ширина (м)</label><br>
-                <input type="text" id="width" onKeyUp="digit(this.id)" placeholder="1.1"><br>
-                <label>Тип ковра</label><br>
-                <select id="type">
-                  <option value="0">Выберите тип</option>
-                  <option value='250'>Дорожка на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Дорожка на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Изделие менее 1 кв. м - </option>
-                  <option value='250'>Ковер акриловый (стриженный беж) - длина до 2,5 м</option>
-                  <option value='270'>Ковер акриловый (стриженный беж) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер вискозный - длина до 2,5 м</option>
-                  <option value='270'>Ковер вискозный - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='270'>Ковер ворсовый (ворс от 5 мм) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Ковер на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Ковер на резиновой основе - длина до 2,5 м</option>
-                  <option value='250'>Ковер плотный, стриженный и т.д. - длина до 2,5 м</option>
-                  <option value='250'>Ковер полипропиленовый, тонкий - длина до 2,5 м</option>
-                  <option value='250'>Ковер приклеенный на ткани, КНР и др. - длина до 2,5 м</option>
-                  <option value='270'>Ковер приклеенный на ткани, КНР и др. - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер шелковый - длина до 2,5 м</option>
-                  <option value='270'>Ковер шелковый - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе полушерстяной - Низковорсовый (ворс до 5 мм) длина
-                    до 5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе с бахрамой - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе синтетический - Кроме белого, низковорсовый (ворс
-                    до 5 мм) длина от 3 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе шерстяной - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='250'>Ковролин (ковровое покрытие) - Кроме белого, низковорсовый (ворс до 5 мм) длина от
-                    3 м</option>
-                  <option value='250'>Ковролин белый - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                  <option value='250'>Ковролин ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='220'>Лапша (травка) - площадь до 2 кв. м</option>
-                  <option value='250'>Палас - площадь до 3 кв. м</option>
-                  <option value='250'>Палас клееный СССР - Кроме белого, низковорсовый (ворс до 5 мм) длина от 3 м
-                  </option>
-                  <option value='250'>Светлый ковер на тканой основе - средневорсовый (от 5 до 20 мм), длина до 3 м
-                  </option>
-                  <option value='250'>Стриженная синтетика - длина до 5 м</option>
-                  <option value='250'>Циновка, плед - Длина до 5 м</option>
-                  <option value='250'>Шерстяные ковры - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                </select>
-              </form>
-              <p id="sub_total">Подитог: от 0 руб.</p>
-              <p id="add_1"><span>&#10133;</span> Добавить ковер</p>
+            <div class="calculator__container">
+              <template id="carpet">
+                <div class="calculator__carpet">
+                  <h2 class="calculator__title">Ковёр №1</h2>
+                  <form class="calculator__form">
+                    <p class="calculator__text">Длина (м)</p>
+                    <input type="text" class="calculator__form-input calculator__form-input_param_height" placeholder="1.1">
+                    <p class="calculator__text">Ширина (м)</p>
+                    <input type="text" class="calculator__form-input calculator__form-input_param_width"
+                      onKeyUp="digit(this)" placeholder="1.1">
+                    <p class="calculator__text">Тип ковра</p>
+                    <select class="calculator__form-input calculator__form-input_param_type" title="Выберите тип">
+                      <option value="0">Выберите тип</option>
+                      <option value='250'>Изделие менее 1 кв. м</option>
+                      <option value='250'>Дорожка на моющей основе - площадь до 3 кв. м</option>
+                      <option value='250'>Дорожка на моющей основе - Длина от 2 до 5 м</option>
+                      <option value='250'>Ковер акриловый (стриженный беж) - длина до 2,5 м</option>
+                      <option value='270'>Ковер акриловый (стриженный беж) - длина от 2,5 до 6 м</option>
+                      <option value='250'>Ковер вискозный - длина до 2,5 м</option>
+                      <option value='270'>Ковер вискозный - длина от 2,5 до 6 м</option>
+                      <option value='250'>Ковер ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
+                      <option value='270'>Ковер ворсовый (ворс от 5 мм) - длина от 2,5 до 6 м</option>
+                      <option value='250'>Ковер на моющей основе - площадь до 3 кв. м</option>
+                      <option value='250'>Ковер на моющей основе - Длина от 2 до 5 м</option>
+                      <option value='250'>Ковер на резиновой основе - длина до 2,5 м</option>
+                      <option value='250'>Ковер плотный, стриженный и т.д. - длина до 2,5 м</option>
+                      <option value='250'>Ковер полипропиленовый, тонкий - длина до 2,5 м</option>
+                      <option value='250'>Ковер приклеенный на ткани, КНР и др. - длина до 2,5 м</option>
+                      <option value='270'>Ковер приклеенный на ткани, КНР и др. - длина от 2,5 до 6 м</option>
+                      <option value='250'>Ковер шелковый - длина до 2,5 м</option>
+                      <option value='270'>Ковер шелковый - длина от 2,5 до 6 м</option>
+                      <option value='250'>Ковер, дорожка на тканой основе полушерстяной - Низковорсовый (ворс до 5 мм)
+                        длина
+                        до 5 м</option>
+                      <option value='250'>Ковер, дорожка на тканой основе с бахрамой - Низковорсовый (ворс до 5 мм)
+                        длина
+                        до
+                        5 м</option>
+                      <option value='250'>Ковер, дорожка на тканой основе синтетический - Кроме белого, низковорсовый
+                        (ворс
+                        до 5 мм) длина от 3 м</option>
+                      <option value='250'>Ковер, дорожка на тканой основе шерстяной - Низковорсовый (ворс до 5 мм) длина
+                        до
+                        5 м</option>
+                      <option value='250'>Ковролин (ковровое покрытие) - Кроме белого, низковорсовый (ворс до 5 мм)
+                        длина
+                        от
+                        3 м</option>
+                      <option value='250'>Ковролин белый - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
+                      <option value='250'>Ковролин ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
+                      <option value='220'>Лапша (травка) - площадь до 2 кв. м</option>
+                      <option value='250'>Палас - площадь до 3 кв. м</option>
+                      <option value='250'>Палас клееный СССР - Кроме белого, низковорсовый (ворс до 5 мм) длина от 3 м
+                      </option>
+                      <option value='250'>Светлый ковер на тканой основе - средневорсовый (от 5 до 20 мм), длина до 3 м
+                      </option>
+                      <option value='250'>Стриженная синтетика - длина до 5 м</option>
+                      <option value='250'>Циновка, плед - Длина до 5 м</option>
+                      <option value='250'>Шерстяные ковры - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
+                    </select>
+                  </form>
+                  <p class="calculator__text">
+                    Подитог: от <span class="calculator__text-sum">0</span> руб.
+                  </p>
+                  <button class="calculator__button calculator__button_type_add" type="button">
+                    <span>&#10133;</span> Добавить ковер
+                  </button>
+                </div>
+              </template>
             </div>
-            <div id="form2" style="display: none" class="test">
-              <form id="form2">
-                <h2>Ковёр №2 <span id="del2" title="Убрать ковер" class="delete">&#10008;</span></h2>
-                <label>Длина (м)</label><br>
-                <input type="text" id="height2" onKeyUp="digit(this.id)" placeholder="1.1"><br>
-                <label>Ширина (м)</label><br>
-                <input type="text" id="width2" onKeyUp="digit(this.id)" placeholder="1.1"><br>
-                <label>Тип ковра</label><br>
-                <select id="type2">
-                  <option value="0">Выберите тип</option>
-                  <option value='250'>Дорожка на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Дорожка на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Изделие менее 1 кв. м - </option>
-                  <option value='250'>Ковер акриловый (стриженный беж) - длина до 2,5 м</option>
-                  <option value='250'>Ковер акриловый (стриженный беж) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер вискозный - длина до 2,5 м</option>
-                  <option value='250'>Ковер вискозный - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='270'>Ковер ворсовый (ворс от 5 мм) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Ковер на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Ковер на резиновой основе - длина до 2,5 м</option>
-                  <option value='250'>Ковер плотный, стриженный и т.д. - длина до 2,5 м</option>
-                  <option value='250'>Ковер полипропиленовый, тонкий - длина до 2,5 м</option>
-                  <option value='250'>Ковер приклеенный на ткани, КНР и др. - длина до 2,5 м</option>
-                  <option value='270'>Ковер приклеенный на ткани, КНР и др. - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер шелковый - длина до 2,5 м</option>
-                  <option value='270'>Ковер шелковый - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе полушерстяной - Низковорсовый (ворс до 5 мм) длина
-                    до 5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе с бахрамой - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе синтетический - Кроме белого, низковорсовый (ворс
-                    до 5 мм) длина от 3 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе шерстяной - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='160'>Ковролин (ковровое покрытие) - Кроме белого, низковорсовый (ворс до 5 мм) длина от
-                    3 м</option>
-                  <option value='250'>Ковролин белый - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                  <option value='250'>Ковролин ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='250'>Лапша (травка) - площадь до 2 кв. м</option>
-                  <option value='250'>Палас - площадь до 3 кв. м</option>
-                  <option value='250'>Палас клееный СССР - Кроме белого, низковорсовый (ворс до 5 мм) длина от 3 м
-                  </option>
-                  <option value='250'>Светлый ковер на тканой основе - средневорсовый (от 5 до 20 мм), длина до 3 м
-                  </option>
-                  <option value='250'>Стриженная синтетика - длина до 5 м</option>
-                  <option value='250'>Циновка, плед - Длина до 5 м</option>
-                  <option value='250'>Шерстяные ковры - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                </select>
-              </form>
-              <p id="sub_total2">Подитог: от 0 руб.</p>
-              <p id="add_2"><span>&#10133;</span> Добавить ковер</p>
-            </div>
-            <div id="form3" style="display: none" class="test">
-              <h2>Ковёр №3 <span id="del3" title="Убрать ковер" class="delete">&#10008;</span></h2>
-              <form id="form3">
-                <label>Длина (м)</label><br>
-                <input type="text" id="height3" onKeyUp="digit(this.id)" placeholder="1.1"><br>
-                <label>Ширина (м)</label><br>
-                <input type="text" id="width3" onKeyUp="digit(this.id)" placeholder="1.1"><br>
-                <label>Тип ковра</label><br>
-                <select id="type3">
-                  <option value="0">Выберите тип</option>
-                  <option value='250'>Дорожка на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Дорожка на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Изделие менее 1 кв. м - </option>
-                  <option value='250'>Ковер акриловый (стриженный беж) - длина до 2,5 м</option>
-                  <option value='270'>Ковер акриловый (стриженный беж) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер вискозный - длина до 2,5 м</option>
-                  <option value='270'>Ковер вискозный - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='270'>Ковер ворсовый (ворс от 5 мм) - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер на моющей основе - площадь до 3 кв. м</option>
-                  <option value='250'>Ковер на моющей основе - Длина от 2 до 5 м</option>
-                  <option value='250'>Ковер на резиновой основе - длина до 2,5 м</option>
-                  <option value='250'>Ковер плотный, стриженный и т.д. - длина до 2,5 м</option>
-                  <option value='250'>Ковер полипропиленовый, тонкий - длина до 2,5 м</option>
-                  <option value='250'>Ковер приклеенный на ткани, КНР и др. - длина до 2,5 м</option>
-                  <option value='270'>Ковер приклеенный на ткани, КНР и др. - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер шелковый - длина до 2,5 м</option>
-                  <option value='270'>Ковер шелковый - длина от 2,5 до 6 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе полушерстяной - Низковорсовый (ворс до 5 мм) длина
-                    до 5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе с бахрамой - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе синтетический - Кроме белого, низковорсовый (ворс
-                    до 5 мм) длина от 3 м</option>
-                  <option value='250'>Ковер, дорожка на тканой основе шерстяной - Низковорсовый (ворс до 5 мм) длина до
-                    5 м</option>
-                  <option value='250'>Ковролин (ковровое покрытие) - Кроме белого, низковорсовый (ворс до 5 мм) длина от
-                    3 м</option>
-                  <option value='250'>Ковролин белый - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                  <option value='250'>Ковролин ворсовый (ворс от 5 мм) - длина до 2,5 м</option>
-                  <option value='220'>Лапша (травка) - площадь до 2 кв. м</option>
-                  <option value='250'>Палас - площадь до 3 кв. м</option>
-                  <option value='250'>Палас клееный СССР - Кроме белого, низковорсовый (ворс до 5 мм) длина от 3 м
-                  </option>
-                  <option value='250'>Светлый ковер на тканой основе - средневорсовый (от 5 до 20 мм), длина до 3 м
-                  </option>
-                  <option value='250'>Стриженная синтетика - длина до 5 м</option>
-                  <option value='250'>Циновка, плед - Длина до 5 м</option>
-                  <option value='250'>Шерстяные ковры - средневорсовый (от 5 до 20 мм), длина до 3 м</option>
-                </select>
-              </form>
-              <p id="sub_total3">Подитог: от 0 руб.</p>
-              <p id="add_1"><span>&nbsp;</span></p>
-            </div>
-            <br clear="all">
-            <div id="total" class="total">Итог: от 0 руб.</div>
+            <p class="calculator__total">Итог: от <span class="calculator__total-sum">0</span> руб.</p>
           </div>
-
-          <p class="section-paragraph inner-page__warning">Окончательную стоимость чистки уточняйте у менеджера</p>
+          <p class="section-paragraph inner-page__warning">Окончательную стоимость чистки уточняйте у&nbsp;менеджера</p>
         </article>
       </section>
     </main>

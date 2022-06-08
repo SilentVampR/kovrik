@@ -102,8 +102,15 @@
 @import url(../blocks/table/__cell/_type/table__cell_type_price.css);
 
 @import url(../blocks/calculator/calculator.css);
+@import url(../blocks/calculator/__container/calculator__container.css);
 @import url(../blocks/calculator/__carpet/calculator__carpet.css);
 @import url(../blocks/calculator/__title/calculator__title.css);
 @import url(../blocks/calculator/__total/calculator__total.css);
+@import url(../blocks/calculator/__form-input/calculator__form-input.css);
+@import url(../blocks/calculator/__form-input/_type/calculator__form-input_param_type.css);
+@import url(../blocks/calculator/__text/calculator__text.css);
+@import url(../blocks/calculator/__button/calculator__button.css);
+@import url(../blocks/calculator/__button/_type/calculator__button_type_add.css);
+@import url(../blocks/calculator/__button/_type/calculator__button_type_remove.css);
 /*@import url(../blocks/calculator/);
 @import url(../blocks/calculator/);*/

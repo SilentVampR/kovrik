@@ -1,5 +1,6 @@
 .calculator__carpet {
-  float:left; /* УДАЛИТЬ НАХУЙ */
+  display: flex;
+  flex-direction: column;
 	margin-right: 30px;
 }
 

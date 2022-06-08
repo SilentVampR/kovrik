@@ -1,0 +1,6 @@
+.calculator__button {
+  margin: 20px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
