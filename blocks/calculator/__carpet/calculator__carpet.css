@@ -1,0 +1,8 @@
+.calculator__carpet {
+  float:left; /* УДАЛИТЬ НАХУЙ */
+	margin-right: 30px;
+}
+
+.calculator__carpet:last-of-type {
+  margin: 0;
+}

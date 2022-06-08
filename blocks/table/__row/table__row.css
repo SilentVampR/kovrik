@@ -1,0 +1,9 @@
+.table__row {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.table__row:nth-of-type(2n) {
+  background-color: #fda;
+}

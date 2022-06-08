@@ -1,0 +1,10 @@
+.inner-page__paragraph {
+  text-align: left;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-page__paragraph {
+    font-size: 18px;
+  }
+}

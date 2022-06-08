@@ -1,0 +1,10 @@
+.inner-page__list {
+  margin: 15px 0 0;
+  padding: 0 0 0 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-page__list {
+    padding: 0 0 0 45px;
+  }
+}

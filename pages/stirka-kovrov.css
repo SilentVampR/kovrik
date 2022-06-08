@@ -51,7 +51,6 @@
 /* SECTION */
 @import url(../blocks/section-title/section-title.css);
 @import url(../blocks/section-paragraph/section-paragraph.css);
-@import url(../blocks/section-paragraph/_type/section-paragraph_type_inner-page.css);
 
 @import url(../blocks/section-slider/section-slider.css);
 @import url(../blocks/section-slider/__link-container/section-slider__link-container.css);
@@ -87,3 +86,24 @@
 @import url(../blocks/side-menu/__link/side-menu__link.css);
 @import url(../blocks/side-menu/__img/side-menu__img.css);
 @import url(../blocks/side-menu/__link-text/side-menu__link-text.css);
+
+@import url(../blocks/inner-page/inner-page.css);
+@import url(../blocks/inner-page/__title/inner-page__title.css);
+@import url(../blocks/inner-page/__paragraph/inner-page__paragraph.css);
+@import url(../blocks/inner-page/__span-accent/inner-page__span-accent.css);
+@import url(../blocks/inner-page/__list/inner-page__list.css);
+@import url(../blocks/inner-page/__list-item/inner-page__list-item.css);
+@import url(../blocks/inner-page/__warning/inner-page__warning.css);
+@import url(../blocks/inner-page/__img/inner-page__img.css);
+
+@import url(../blocks/table/table.css);
+@import url(../blocks/table/__row/table__row.css);
+@import url(../blocks/table/__cell/table__cell.css);
+@import url(../blocks/table/__cell/_type/table__cell_type_price.css);
+
+@import url(../blocks/calculator/calculator.css);
+@import url(../blocks/calculator/__carpet/calculator__carpet.css);
+@import url(../blocks/calculator/__title/calculator__title.css);
+@import url(../blocks/calculator/__total/calculator__total.css);
+/*@import url(../blocks/calculator/);
+@import url(../blocks/calculator/);*/

@@ -1,0 +1,12 @@
+.inner-page__list-item {
+  font-size: 16px;
+  color: #646464;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-page__list-item {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

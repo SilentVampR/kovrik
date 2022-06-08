@@ -1,0 +1,17 @@
+.inner-page__img {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-page__img {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inner-page__img {
+    padding: 0 80px;
+  }
+}
