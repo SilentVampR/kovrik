@@ -148,8 +148,13 @@ const totalSum = () => {
       total += parseFloat(item.textContent);
     })
   }
-  //Берем все итого на странице и складываем в конце каждой калькуляции
-  console.log(total);
+  const totalField = calculator.querySelector('.calculator__total-sum');
+  totalField.textContent = total;
+}
+
+const handleInputChange = (e) => {
+  digit(e.target);
+  calculate(e);
 }
 
 const addForm = () => {
@@ -159,32 +164,40 @@ const addForm = () => {
   if(forms) {
     formsOnPage = Array.from(forms).length;
   }
-  if (formsOnPage <= 3) {
+  if (formsOnPage <= 2) {
     const formId = formsOnPage + 1;
     const form = carpetTemplate.querySelector('.calculator__form');
     const inputs = form.querySelectorAll('.calculator__form-input');
     const title = carpetTemplate.querySelector('.calculator__title');
     const addButton = carpetTemplate.querySelector('.calculator__button');
+
+    inputs.forEach(item => {
+      if(item.name === 'type') {
+        item.addEventListener('change', calculate);
+      } else {
+        item.addEventListener('keyup', handleInputChange);
+      }
+    });
+
     if(formId !== 1) {
       addButton.classList.remove('calculator__button_type_add');
       addButton.classList.add('calculator__button_type_remove');
-      addButton.textContent = "Удалить ковёр";
+      addButton.textContent = "✘" + " Удалить ковёр";
       addButton.addEventListener('click', removeForm);
     } else {
       addButton.addEventListener('click', addForm);
     }
 
-    form.addEventListener('keyup', calculate);
+    //form.addEventListener('keyup', calculate);
 
     title.textContent = `Ковёр №${formId}`;
-    console.log(carpetTemplate);
     calculatorContainer.append(carpetTemplate);
   }
 }
 
 const removeForm = (e) => {
-  // e.target.removeEventlistener('click', removeForm);
-  console.log(e.target);
+  e.target.closest('.calculator__carpet').remove();
+  totalSum();
 }
 
 
