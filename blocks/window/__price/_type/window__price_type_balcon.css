@@ -1,0 +1,18 @@
+.window__price_type_balcon {
+  bottom: 70px;
+  left: 5px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 430px) {
+  .window__price_type_balcon {
+    left: 1.6279vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .window__price_type_balcon {
+    font-size: unset;
+    left: 10px;
+  }
+}

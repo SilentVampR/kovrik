@@ -130,9 +130,16 @@ const calculate = (e) => {
   const targetForm = e.target.closest('.calculator__carpet');
   const height = targetForm.querySelector('.calculator__form-input_param_height').value;
   const width = targetForm.querySelector('.calculator__form-input_param_width').value;
-  const price = targetForm.querySelector('.calculator__form-input_param_type').value;
+  const priceSelector = targetForm.querySelector('.calculator__form-input_param_type');
+  const priceSelectorText = priceSelector.options[priceSelector.selectedIndex].text;
+  const price = priceSelector.value;
+  if (price > 0) {
+    priceSelector.title = priceSelectorText;
+  } else {
+    priceSelector.title = "Выберите тип";
+  }
   let subTotalPrice = 0;
-  if(height > 0 && width > 0 && price > 0) {
+  if (height > 0 && width > 0 && price > 0) {
     subTotalPrice = width * height * price;
     targetForm.querySelector('.calculator__text-sum').textContent = subTotalPrice;
   }
@@ -142,7 +149,7 @@ const calculate = (e) => {
 const totalSum = () => {
   const sums = calculator.querySelectorAll('.calculator__text-sum');
   let total = 0;
-  if(sums) {
+  if (sums) {
     const sumsList = Array.from(sums);
     sumsList.forEach(item => {
       total += parseFloat(item.textContent);
@@ -161,7 +168,7 @@ const addForm = () => {
   const carpetTemplate = calculatorContainer.querySelector('#carpet').content.querySelector('.calculator__carpet').cloneNode(true);
   let formsOnPage = 0;
   const forms = calculatorContainer.querySelectorAll('.calculator__form');
-  if(forms) {
+  if (forms) {
     formsOnPage = Array.from(forms).length;
   }
   if (formsOnPage <= 2) {
@@ -170,9 +177,10 @@ const addForm = () => {
     const inputs = form.querySelectorAll('.calculator__form-input');
     const title = carpetTemplate.querySelector('.calculator__title');
     const addButton = carpetTemplate.querySelector('.calculator__button');
+    const removeButton = carpetTemplate.querySelector('.calculator__remove-button');
 
     inputs.forEach(item => {
-      if(item.name === 'type') {
+      if (item.name === 'type') {
         item.addEventListener('change', calculate);
       } else {
         item.addEventListener('keyup', handleInputChange);
@@ -180,17 +188,13 @@ const addForm = () => {
     });
 
     if(formId !== 1) {
-      addButton.classList.remove('calculator__button_type_add');
-      addButton.classList.add('calculator__button_type_remove');
-      addButton.textContent = "✘" + " Удалить ковёр";
-      addButton.addEventListener('click', removeForm);
-    } else {
-      addButton.addEventListener('click', addForm);
+      removeButton.classList.add('calculator__remove-button_active');
+      removeButton.addEventListener('click', removeForm);
     }
-
-    //form.addEventListener('keyup', calculate);
+    addButton.addEventListener('click', addForm);
 
     title.textContent = `Ковёр №${formId}`;
+
     calculatorContainer.append(carpetTemplate);
   }
 }

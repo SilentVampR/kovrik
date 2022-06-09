@@ -1,3 +1,12 @@
-.calculator__button_type_add {
-
+.calculator__button_type_add::after {
+  position: absolute;
+  content: "";
+  left: -25px;
+  bottom: 1px;
+  background-image: url(../../../../images/plus.svg);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

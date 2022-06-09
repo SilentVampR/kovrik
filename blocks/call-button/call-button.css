@@ -23,9 +23,9 @@
 
 @media screen and (min-width: 768px) {
   .call-button {
-    right: 50px;
+    left: 50px;
     bottom: 50px;
     width: unset;
-    left: unset;
+    right: unset;
   }
 }
