@@ -1,6 +1,5 @@
 /* @import url(../blocks);*/
 @import url(../vendor/styles/normalize.css);
-@import url(../vendor/styles/swiper-min.css);
 
 @import url(../vendor/fonts/play.css);
 
@@ -9,6 +8,7 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/page/_disabled/page_disabled.css);
 @import url(../blocks/page/__wrapper/page__wrapper.css);
+@import url(../blocks/page/__content/page__content.css);
 
 /* HEADER */
 @import url(../blocks/header/header.css);
@@ -31,11 +31,6 @@
 
 /* CONTENT */
 @import url(../blocks/content/content.css);
-/*@import url(../blocks/content/__preloader/content__preloader.css);
-@import url(../blocks/content/__preloader/_active/content__preloader_active.css);
-@import url(../blocks/content/__page/content__page.css);
-@import url(../blocks/content/__page/_hidden/content__page_hidden.css);
-@import url(../blocks/content/__page/_no-display/content__page_no-display.css);*/
 
 /* CONTACTS */
 @import url(../blocks/contacts/contacts.css);
@@ -50,6 +45,8 @@
 /* INFO_BLOCK */
 @import url(../blocks/info-block/info-block.css);
 @import url(../blocks/info-block/_type/info-block_type_map.css);
+@import url(../blocks/info-block/_type/info-block_type_menu.css);
+@import url(../blocks/info-block/__main-img/info-block__main-img.css);
 
 /* SECTION */
 @import url(../blocks/section-title/section-title.css);
@@ -59,11 +56,6 @@
 @import url(../blocks/section-slider/__link-container/section-slider__link-container.css);
 @import url(../blocks/section-slider/__link/section-slider__link.css);
 @import url(../blocks/section-slider/__img/section-slider__img.css);
-
-/* OUR_TEAM */
-@import url(../blocks/our-team/our-team.css);
-@import url(../blocks/our-team/__title/our-team__title.css);
-@import url(../blocks/our-team/__subtitle/our-team__subtitle.css);
 
 /* FOOTER */
 @import url(../blocks/footer/footer.css);
@@ -81,16 +73,6 @@
 /* CALL BUTTON */
 @import url(../blocks/call-button/call-button.css);
 
-/* RIBBON */
-@import url(../blocks/ribbon/ribbon.css);
-@import url(../blocks/ribbon/_type/ribbon_type_double-side.css);
-@import url(../blocks/ribbon/_type/ribbon_type_left-side.css);
-@import url(../blocks/ribbon/_type/ribbon_type_right-side.css);
-
-/* HTML-DATA */
-
-@import url(../blocks/html-data/html-data.css);
-
 /* POPUP */
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__container/popup__container.css);
@@ -99,3 +81,25 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 
 /* TEXT PAGES */
+@import url(../blocks/side-menu/side-menu.css);
+@import url(../blocks/side-menu/__link-container/side-menu__link-container.css);
+@import url(../blocks/side-menu/__link/side-menu__link.css);
+@import url(../blocks/side-menu/__img/side-menu__img.css);
+@import url(../blocks/side-menu/__link-text/side-menu__link-text.css);
+
+@import url(../blocks/inner-page/inner-page.css);
+@import url(../blocks/inner-page/__title/inner-page__title.css);
+@import url(../blocks/inner-page/__paragraph/inner-page__paragraph.css);
+@import url(../blocks/inner-page/__span-accent/inner-page__span-accent.css);
+@import url(../blocks/inner-page/__list/inner-page__list.css);
+@import url(../blocks/inner-page/__list-item/inner-page__list-item.css);
+@import url(../blocks/inner-page/__warning/inner-page__warning.css);
+@import url(../blocks/inner-page/__img/inner-page__img.css);
+
+@import url(../blocks/table/table.css);
+@import url(../blocks/table/__row/table__row.css);
+@import url(../blocks/table/__cell/table__cell.css);
+@import url(../blocks/table/__cell/_type/table__cell_type_price.css);
+
+@import url(../blocks/info/info.css);
+@import url(../blocks/info/__text/info__text.css);

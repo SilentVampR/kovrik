@@ -17,7 +17,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom: -40px;
+  bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -29,11 +29,17 @@
   }
   .section-title::after {
     height: 45px;
-    bottom: -40px;
+    bottom: -50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   .section-title {
     font-size: 34px;
   }

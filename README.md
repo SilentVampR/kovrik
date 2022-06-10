@@ -1,2 +1,2 @@
 # kovrik
-Landing Site for Kovrik.ru
+Landing Site for коврик-ру.рф
